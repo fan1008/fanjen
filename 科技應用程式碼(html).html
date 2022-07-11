@@ -1,0 +1,215 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header id="header">
+      <nav>
+        <button id="night" onclick="nightButton()">夜間模式</button>
+        <button id="day" onclick="dayButton()">日間模式</button>
+      </nav> 
+    </header>
+    <div id="demo1">
+      <h1>大家早安!</h1>
+      <button id="morningbutton" onclick="func1()">早安</button>
+      <div id=morning></div>
+      <button id="next" onclick="location.href='#demo2'">下一頁</button>
+    </div>
+    <div id="demo2">
+      <div id=w1></div>
+      <h1>來玩一個小測驗醒腦吧!</h1>
+      <button id="yes" onmouseover="func2()" onmouseout="func3()" onclick="location.href='#demo3'">耶我要玩</button>
+      <button id="no" onmouseover="func4()" onmouseout="func3()">我不要</button>
+      <div id="shark">
+        <img src="https://scontent.ftpe3-1.fna.fbcdn.net/v/t1.15752-9/285493626_994869441208578_3448897946290562173_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=FjO4pgRQMo4AX9rMCQD&_nc_ht=scontent.ftpe3-1.fna&oh=03_AVI4Qf1ZJnEcncNaTcs12v2fRjWdguSP5rS4caAUTQDFzA&oe=62EFFFDD" alt="happy" id="happy">
+        <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.15752-9/285654960_745425953543527_2983413058451631329_n.png?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=6S14pqLRPVAAX9Guozi&_nc_oc=AQkW-3VLo_6EB78c3NEWbPRYMBa22DiLaLICEo0zP9nOL1VGHH9FGdJhm_7ZexZ1uFk&tn=F8rFwvkTBC34-3m8&_nc_ht=scontent.ftpe4-1.fna&oh=03_AVLB4KG3kZGULwrOvXENJ_rZRsv6KZ7yBYNeMBAc5u509g&oe=62CA685E" alt="angry" id="angry">
+      </div>
+    </div>
+    <div id="demo3">
+      <div id=w1></div>
+      <h1>來測試妳的好脾氣指數!</h1>
+      <button id="rule" onclick="func5()">測驗說明</button>
+      <button id="start" onclick="location.href='#demo4'">開始測驗</button>
+    </div>
+    <div id="demo4">
+      <div id=w1></div>
+      <h1>請先預測看看自己會拿幾分</h1>
+      <h3>(最高分:12 最低分:-11)</h3>
+      <input type="number" id="input">
+      <button id="submit" onclick="location.href='#game1'">提交</button>
+    </div>
+    <div id="game1">
+      <table id="t1">
+        <tr>
+          <th colspan="5">
+            <h1>Q1:當有人嘲笑你的外表時(ex:胖、矮)，你會有下列哪種反應?</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.15752-9/285507450_1037269617181651_2257849926770529225_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=gqn-NB2qihkAX9ipCWB&_nc_oc=AQn-jvq3Ny7WapRfE6W7LAIxuztFO9WwHop0h6_rzPVD5yVoGnAVJeKTpyrKqw_e0yo&_nc_ht=scontent.ftpe4-2.fna&oh=03_AVI4R49g4f0O9rDsqn-EUBcmerZxZ5mfsL0kvBP5YxDlsA&oe=62CD897B" id="P">
+          </td>
+          <td>
+            <img src="https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.15752-9/285985252_434835398132937_5324440335723075608_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=H8IryEJbCUgAX_9IeH2&_nc_ht=scontent.ftpe4-2.fna&oh=03_AVJBf2_804qkahG21i5l9kbHryEoDdhSg57EUalqunXucQ&oe=62CD0E29" id="P">
+          </td>
+          <td>
+            <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.15752-9/285945875_756570208923610_6167407166683015067_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=OhXlRzPx_moAX_B6p4Z&_nc_ht=scontent.ftpe4-1.fna&oh=03_AVKgSIiOxZ67TkU7sZL9Dcs3qJvSQJTorYHgct-F7ggtcQ&oe=62CC21BB" id="P">
+          </td>
+          <td>
+            <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.15752-9/285923023_316514390686735_4174921832751497583_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=4j7TzKgOImgAX-HnhHg&_nc_ht=scontent.ftpe4-1.fna&oh=03_AVK_mPZ5FoAc5JDP08RE8fBUVcTK2rsqsfQ78WJKbjOxPA&oe=62CD50EC" id="P">
+          </td>
+          <td>
+            <img src="https://scontent.ftpe3-2.fna.fbcdn.net/v/t1.15752-9/285834689_5107160832733442_4559583465001646058_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=IZhKXeqjsz0AX9xS8aA&_nc_ht=scontent.ftpe3-2.fna&oh=03_AVJbQiqmVFKjMV7b9L2Plw1JbrPMbs0Buy8jxoLQtGgHYA&oe=62E73BA3" id="P">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="a1" onclick="func6()">A(憤怒至極)</button>
+          </td>
+          <td>
+            <button id="b1" onclick="func7()">B(微憤怒)</button>
+          </td>
+          <td>
+            <button id="c1" onclick="func8()">C(玻璃心)</button>
+          </td>
+          <td>
+            <button id="d1" onclick="func9()">D(強顏歡笑)</button>
+          </td>
+          <td>
+            <button id="e1" onclick="func10()">E(豁達)</button>
+          </td>
+
+        </tr>
+      </table>
+    </div>
+    <div id="game2">
+      <table id="t2">
+        <tr>
+          <th colspan="5">
+            <h1>Q2:分組報告時，遇到都不做事的冗員你會有甚麼反應?</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.15752-9/285533689_587615599310125_8821391712611958093_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=d5GX6x0abp8AX-n-Z42&_nc_ht=scontent.ftpe4-1.fna&oh=03_AVJ2iPQANAaFU2PrvtpzyOJ13qH9a_Jo5OfJadaDtg0A4w&oe=62CCF2D8" id="P">
+          </td>
+          <td>
+            <img src="https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.15752-9/285532905_5822404504455821_3833792947177103363_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=_6nAKERoOqYAX8DS39Z&_nc_ht=scontent.ftpe4-2.fna&oh=03_AVL0O5-fmu64Ug-spDAqJ5xaNxGQIJ-ngpiERCOEB-QgkA&oe=62CC03E4" id="P">
+          </td>
+          <td>
+            <img src="https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.15752-9/285878972_2766077150205008_1649491017290638777_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=uym_-MROPDEAX9VCq8J&_nc_ht=scontent.ftpe4-2.fna&oh=03_AVJdi7-Jq52DPIAV2tR2YXdKl2KsvYdw2l7AwMralduMzw&oe=62CE1560" id="P">
+          </td>
+          <td>
+            <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.15752-9/285204590_823096338673644_4164974329086815843_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=u_M58hwkb9EAX-ciBGL&_nc_ht=scontent.ftpe4-1.fna&oh=03_AVIljqUq37sTtdH9Kmc4po6tYC_qFPn3CYCDqFP-CP9XYg&oe=62CB58B4" id="P">
+          </td>
+          <td>
+            <img src="https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.15752-9/286031237_451809963439052_3706855819348862280_n.png?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_ohc=iq_D0zqeXRQAX9JYDJm&_nc_ht=scontent.ftpe4-2.fna&oh=03_AVKo3--29-iMQXBVXMcLnx2n11QSB4Z6-Apbwq4_wBtkXw&oe=62CCAF28" id="P">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="a2" onclick="func11()">A(直接打他出氣)</button>
+          </td>
+          <td>
+            <button id="b2" onclick="func12()">B(生氣)</button>
+          </td>
+          <td>
+            <button id="c2" onclick="func12()">C(心裡默默詛咒他下地獄)</button>
+          </td>
+          <td>
+            <button id="d1" onclick="func13()">D(強顏歡笑)</button>
+          </td>
+          <td>
+            <button id="e1" onclick="func14()">E(沒關係)</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="game3">
+      <table id="t3">
+        <tr>
+          <th colspan="5">
+            <h1>Q3:當你發現朋友在IG上偷發限動罵你，你會有甚麼反應?</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.15752-9/285414837_1020334712181524_2282557497538122368_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=S1wVUo6Lh_kAX-_gb2b&_nc_ht=scontent.ftpe4-2.fna&oh=03_AVLe0CFR5KaOGckFVSinvCmlVs88FPTK_IHOqeyj8QR7nQ&oe=62CCF0A7" id="P">
+          </td>
+          <td>
+            <img src="https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.15752-9/285622082_2188302288014790_510187834801736557_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=Wvu7EUBZMNkAX9B-CiX&_nc_ht=scontent.ftpe4-2.fna&oh=03_AVKeamqZgG7KHECHSGSwJlpr6btZisS91bM4bBKJ5cRbvQ&oe=62CBAAF5" id="P">
+          </td>
+          <td>
+            <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.15752-9/286047023_592179692625546_2535234855952232931_n.png?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=WXljmH0ijCAAX_qu--G&_nc_ht=scontent.ftpe4-1.fna&oh=03_AVI6HQEKaoni-dYkmQeUlsnTNYJOa63AjT9h1X7Sm-_xlQ&oe=62CB4E61" id="P">
+          </td>
+          <td>
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/285986436_960679771269763_2005754910852656837_n.png?stp=dst-png_p228x119&_nc_cat=100&ccb=1-7&_nc_sid=aee45a&_nc_ohc=PoTyWQx5PVIAX8PcLZH&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVKtJn3yREmUTIkufNRlIUFV_8tyqaIDK6U-Q0s-ZhjwVg&oe=62CCB966" id="P">
+          </td>
+          <td>
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/286099765_717388612927321_4873676174101251831_n.png?stp=dst-png_s240x240&_nc_cat=104&ccb=1-7&_nc_sid=aee45a&_nc_ohc=C-jBNvSHwikAX9g5Wo-&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJ2D2whBfuJH5Szi2-wQZxDCfUlM8L4_IudNZi7sgPiww&oe=62CB7073" id="P">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="a3" onclick="func15()">A(綁起來拷問)</button>
+          </td>
+          <td>
+            <button id="b3" onclick="func16()">B(皺眉不語)</button>
+          </td>
+          <td>
+            <button id="c3" onclick="func17()">C(懷疑人生)</button>
+          </td>
+          <td>
+            <button id="d3" onclick="func18()">D(不明所以)</button>
+          </td>
+          <td>
+            <button id="e3" onclick="func19()">E(樂觀豁達)</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="game4">
+      <div id=w1></div>
+      <h1>
+        是非題: <button id="instruction" onclick="func20()">查看說明</button><br>
+      </h1>
+      <div id="Q">
+        1.過往傷痛被提及時
+      </div>
+      <button id="true" onclick="func21()" onmouseover="func23()" onmouseout="func24()">O</button>
+      <button id="false" onclick="func22()" onmouseover="func25()" onmouseout="func26()">X</button>
+      <div id="true1">
+        <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.15752-9/286209163_583408436853850_477754462322838913_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=F52T3FzrvFQAX_7ZreM&_nc_oc=AQmRl678G-dlv1iAP9Fb0NOVBgLfZCJDWwwk1S-yBXh3icS7_o7haUOs_Ezzoe5-hec&_nc_ht=scontent.ftpe4-1.fna&oh=03_AVJaffMSQ_CQg-lxE1qzJ_QP-mbDD17dn03GoBYuZR5yPQ&oe=62CC3FA1" alt="" id="t">
+      </div>
+      <div id="false1">
+        <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/285935191_2123519281149851_7249868404648769660_n.png?_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_ohc=xxt1VS2u-AcAX8yEywu&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJnVjE31EZAxgb6JPoGT2gC7mSqoVXS-Q1ORPgBX8k5yg&oe=62CD4500" alt="" id="f">
+      </div>
+
+    </div>
+    <div id="name">
+      <div id=w1></div>
+      <h1>輸入姓名</h1>
+      <input type="text" id="nameinput">
+      <button id="submit2" onclick="location.href='#result'">提交</button>
+
+    </div>
+    <div id="result">
+      <div id=w1></div>
+      <div id="result1">
+        <button id="r" onclick="func27()">點我看結果</button>
+      </div>
+      <div id="result2"></div>
+      <div id="result3"></div>
+      <button id="end2" onclick="location.href='#end'">下一頁</button>
+    </div>
+    <div id="end">
+      <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t1.15752-9/285640181_395104355896871_7281405742095698625_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=4jZas4kHHpQAX80fsdm&_nc_ht=scontent.ftpe4-1.fna&oh=03_AVKtZFwA8m7pMOia1bJ5eAg6MWo73wOK0cGNKrpxrWIYDg&oe=62CC41A1" alt="">
+      <h1>感謝聆聽<br>祝大家有個美好的早晨!</h1>
+    </div>
+  </body>
+
+</html>
